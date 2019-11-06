@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # Select session id for figure
 #session_id = 'XDcGpQ1WlO'
 name = open("data/id.txt")
-session_id = name.readline().strip()
+session_id = name.readline()
 name.close()
 
 # Read delimited session string from file, convert to 2d array

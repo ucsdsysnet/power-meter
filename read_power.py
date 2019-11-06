@@ -10,7 +10,7 @@ f = open("data/session-"+session_id+".txt", "w")
 
 # Store session id in a file
 name = open("data/id.txt", "w")
-name.write("%s\n" % session_id)
+name.write("%s" % session_id)
 
 print("Beginning read session: "+session_id)
 
