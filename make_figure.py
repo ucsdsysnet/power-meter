@@ -8,7 +8,10 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 # Select session id for figure
-session_id = 'SdUKMixBry'
+#session_id = 'XDcGpQ1WlO'
+name = open("data/id.txt")
+session_id = name.readline().strip()
+name.close()
 
 # Read delimited session string from file, convert to 2d array
 f = open('data/session-'+session_id+'.txt', 'r')

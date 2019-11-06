@@ -7,6 +7,11 @@ print(instr.ask("*IDN?"))
 # Generate session id and create output file
 session_id = ''.join([random.choice(string.ascii_letters + string.digits) for n in xrange(10)])
 f = open("data/session-"+session_id+".txt", "w")
+
+# Store session id in a file
+name = open("data/id.txt", "w")
+name.write("%s\n" % session_id)
+
 print("Beginning read session: "+session_id)
 
 # Read power over time interval (set to 1s)
