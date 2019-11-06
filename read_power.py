@@ -3,9 +3,9 @@ import numpy as numpy
 import pandas as pd
 
 # Using Agg instead of Xwindows or run ssh -X 
-# (comment out these lines if you are running locally)
-# import matplotlib
-# matplotlib.use('Agg')
+# (Configured for pipenv)
+import matplotlib
+matplotlib.use('Agg')
 
 import matplotlib.pyplot as plt
 
