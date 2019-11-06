@@ -8,7 +8,6 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 # Select session id for figure
-#session_id = 'XDcGpQ1WlO'
 name = open("data/id.txt")
 session_id = name.readline()
 name.close()

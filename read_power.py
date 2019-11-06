@@ -11,6 +11,7 @@ f = open("data/session-"+session_id+".txt", "w")
 # Store session id in a file
 name = open("data/id.txt", "w")
 name.write("%s" % session_id)
+name.close()
 
 print("Beginning read session: "+session_id)
 
@@ -18,6 +19,7 @@ print("Beginning read session: "+session_id)
 s = sched.scheduler(time.time, time.sleep)
 def read_power(sc):
     f.write(instr.ask("measure:scalar:power:real? 0")+",")
+    f.flush()
     s.enter(1, 1, read_power, (sc,))
 
 s.enter(1, 1, read_power, (s,))
