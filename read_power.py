@@ -60,6 +60,7 @@ frames = [data[i*4:(i+1)*4] for i in range(len(data)//4)]
 
 # Generate plot and save to /figures
 df = pd.DataFrame(frames, columns=['c09-13', 'c09-14', 'c09-15', 'c09-16']) # Categorizes based on server names
+
 plt.figure()
-df.plot()
+df.plot(x='Machines',y='Power (W)')
 plt.savefig('figures/'+session_id+'.png') # Saves graph in figures dir
