@@ -84,6 +84,7 @@ while (i < len(data)): # Places data into server-appropriate array
   i = i + 1
 
 # Plots lines for the four servers
+plt.ylim(85, 150)
 plt.plot(secs, c1, color = 'g', label = 'c09-13')
 plt.plot(secs, c2, color = 'r', label = 'c09-14')
 plt.plot(secs, c3, color = 'orange', label = 'c09-15')
